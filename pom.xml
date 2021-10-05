@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.stanford.protege</groupId>
-	<artifactId>webprotege-criteria-api</artifactId>
+	<artifactId>webprotege-criteria</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>webprotege-criteria-api</name>
+	<name>webprotege-criteria</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>16</java.version>
