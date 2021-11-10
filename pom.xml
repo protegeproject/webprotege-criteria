@@ -17,7 +17,12 @@
 		<java.version>16</java.version>
 	</properties>
 
-
+	<distributionManagement>
+		<snapshotRepository>
+			<id>nexus-snapshots</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
 
 	<dependencies>
 		<dependency>
@@ -137,5 +142,5 @@
 			</build>
 		</profile>
 	</profiles>
-	
+
 </project>
