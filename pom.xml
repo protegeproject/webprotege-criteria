@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>edu.stanford.protege</groupId>
 	<artifactId>webprotege-criteria</artifactId>
-	<version>0.9.1</version>
+	<version>0.9.1-SNAPSHOT</version>
 	<name>webprotege-criteria</name>
 	<description>Data structures for representing matching criteria</description>
 	<properties>
