@@ -1,5 +1,6 @@
 package edu.stanford.protege.webprotege.criteria;
 
+import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -15,15 +16,15 @@ import javax.annotation.Nonnull;
  * 2019-12-09
  */
 @AutoValue
-
 @JsonTypeName("EntityIs")
 public abstract class EntityIsCriteria implements EntityMatchCriteria {
 
     @JsonCreator
-    public static EntityIsCriteria get(@Nonnull @JsonProperty("term") OWLEntity entity) {
+    public static EntityIsCriteria get(@Nonnull @JsonProperty("entity") @JsonAlias("term") OWLEntity entity) {
         return new AutoValue_EntityIsCriteria(entity);
     }
 
+    @JsonProperty("entity")
     @Nonnull
     public abstract OWLEntity getEntity();
 
