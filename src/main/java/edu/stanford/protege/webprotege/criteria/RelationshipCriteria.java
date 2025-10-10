@@ -1,5 +1,6 @@
 package edu.stanford.protege.webprotege.criteria;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonSubTypes.Type;
@@ -22,8 +23,9 @@ import javax.annotation.Nonnull;
 public abstract class RelationshipCriteria implements Criteria {
 
     @Nonnull
-    public static RelationshipCriteria get(@Nonnull RelationshipPropertyCriteria propertyCriteria,
-                                           @Nonnull RelationshipValueCriteria valueCriteria) {
+    @JsonCreator
+    public static RelationshipCriteria get(@Nonnull @JsonProperty("property") RelationshipPropertyCriteria propertyCriteria,
+                                           @Nonnull @JsonProperty("value") RelationshipValueCriteria valueCriteria) {
         return new AutoValue_RelationshipCriteria(propertyCriteria, valueCriteria);
     }
 

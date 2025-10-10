@@ -28,7 +28,6 @@ public abstract class AnyAnnotationValueCriteria implements AnnotationValueCrite
      * A convenicen method that returns an instance of {@link AnyAnnotationPropertyCriteria}.
      */
     @Nonnull
-    @JsonCreator
     public static AnyAnnotationValueCriteria anyValue() {
         return get();
     }
